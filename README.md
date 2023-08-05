@@ -1,8 +1,7 @@
-# React + Vite
+# Memoriser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is just like a note-taker that can be used as to note down important stuffs to do.
 
-Currently, two official plugins are available:
+You can have a good count of the task that you've completed as well as can track which are not yet completed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live at: [Memoriser](https://memosriser.netlify.app/)
