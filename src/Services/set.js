@@ -1,7 +1,13 @@
 import get from "./get"
+import search from "./search"
 export default function set(item){      
     if(item.date == '' || item.title == '')  {
         alert("Cannot Enter the empty item")
+    }
+
+    else if(search(item)){
+        
+        alert("Duplicate entries not allowed!!")
     }
 
     else{

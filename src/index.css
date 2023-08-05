@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .csz425 {
+        @apply px-0 text-sm grid-cols-1 grid-rows-5 gap-4;
+    }
+    .rem-clr-btn{
+        @apply bg-red-500 font-bold p-2 rounded-md col-span-1 ;
+    }
+
+    .add-btn{
+        @apply bg-green-500 font-bold p-2 rounded-md col-span-1 ;
+    }
+}

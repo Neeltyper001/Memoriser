@@ -25,23 +25,6 @@ function App() {
   }
 
     
-  // const  handleEventTitleChange = (e)=>{
-  //       eventTitle = e.target.value;
-  //   }
-
-  // const  handleEventDateChange = (e)=>{
-  //      eventDate = e.target.value;
-  //   }
-
-
-  // const handleDisplayCards = ()=>{
-  //     setDisplayCards(()=>{
-  //       const newDisplayCards = get();
-  //       console.log(newDisplayCards)        
-  //       return newDisplayCards
-  //     })
-  //    }
-    
     function add(){            
       set({title:eventTitle.current.value , date: eventDate.current.value , progressStatus:true , editStatus: false})
       handleDisplay()
@@ -51,10 +34,6 @@ function App() {
       const idx = prompt('Enter the position..')
       setAt(idx , {title:eventTitle.current.value , date: eventDate.current.value , progressStatus:true , editStatus: false})
       handleDisplay()
-    }
-
-    const editCard = (e)=>{
-      console.log("edit Later")      
     }
 
     const removeCard = (e)=>{
@@ -84,8 +63,7 @@ function App() {
             key={index} 
             cardId={index} 
             cardTitle = {obj.title} 
-            cardDate = {obj.date} 
-            editOption = {editCard}
+            cardDate = {obj.date}             
             removeOption= {removeCard}                     
             statusOption = {setStatusCard}/>
           )
@@ -94,21 +72,23 @@ function App() {
     
   return (
     <>
-      <h1>Memo</h1>
-      <header>
+      <h1 className="text-8xl text-center">Memo</h1>
+      <header className="grid grid-rows-2 grid-cols-4 gap-8 px-52 py-14 place-items-center sz425:csz425">
         <Label labelVal="Enter the event title" />
         <Input inputTitle={"Enter the title"} inputVal={eventTitle} />
 
         <Label labelVal="Enter the event date" />
         <Input inputTitle={"Enter the date"} inputVal={eventDate} />
 
-        <Buttons buttonsLabel="add"  handleClick= {add}/>        
-        <Buttons buttonsLabel="addAt.."  handleClick= {addAt}/>        
-        <Buttons buttonsLabel="clear" handleClick={clearCard} />
+        <div className='col-span-4 flex justify-around w-72 sz425:col-span-1'>
+        <Buttons styleClass={'add-btn'} buttonsLabel="add"  handleClick= {add}/>        
+        <Buttons styleClass={'add-btn'} buttonsLabel="addAt.."  handleClick= {addAt}/>        
+        <Buttons styleClass={'rem-clr-btn'} buttonsLabel="clear" handleClick={clearCard} />
+        </div>
       </header>
 
-      <main>      
-        {isEmpty() ? <h1>Add to the notes</h1> : newCards}
+      <main className='relative'>      
+        {isEmpty() ? <h1 className='text-center text-8xl font-bold sz425:text-2xl '>Add to the notes</h1> : newCards}
       </main>
     </>
   )

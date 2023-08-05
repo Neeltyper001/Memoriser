@@ -5,7 +5,7 @@ export default function Label(props){
     
     return(
     <>
-        <label>{props.labelVal}</label>
+        <label className="text-2xl font-bold">{props.labelVal}</label>
     </>
     )
 }
