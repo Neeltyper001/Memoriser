@@ -10,6 +10,10 @@ You can have a track of the task that you've completed as well as can track whic
 - Since I am learning react, so implementing my concepts
 - Notes that I can access in a quick whereever I am
 
+# Future Integerations
+- Working on number of pending and onGoing feature
+- More things would be integerated.
+  
 # Made with
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  ![](	https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
 
